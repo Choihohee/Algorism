@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #define STACK_SIZE 10
 
+
 int *stack;	//int 타입을 가리키는 포인터 stack 선언
 int top = -1;               // top 초기화
 int size = 1;
