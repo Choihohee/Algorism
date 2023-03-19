@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #define STACK_SIZE 10
 
-int *stack;	//int Å¸ÀÔÀ» °¡¸®Å°´Â Æ÷ÀÎÅÍ stack ¼±¾ğ
-int top = -1;               // top ÃÊ±âÈ­
+
+int *stack;	//int íƒ€ì…ì„ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„° stack ì„ ì–¸
+int top = -1;               // top ì´ˆê¸°í™”
 int size = 1;
 
 int isEmpty() {
@@ -20,24 +21,24 @@ int isFull() {
 		return 0;
 }
 
-// ½ºÅÃÀÇ top¿¡ ¿ø¼Ò¸¦ »ğÀÔÇÏ´Â ¿¬»ê
+// ìŠ¤íƒì˜ topì— ì›ì†Œë¥¼ ì‚½ì…í•˜ëŠ” ì—°ì‚°
 void push(int item) {
-	int *temp;	//int Å¸ÀÔÀ» °¡¸®Å°´Â Æ÷ÀÎÅÍ temp ¼±¾ğ
+	int *temp;	//int íƒ€ì…ì„ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„° temp ì„ ì–¸
 
 	if (isFull()) {
 		printf(" Full STACK\n");
 		
-		//int Å¸ÀÔ»çÀÌÁî * (STACK_SIZE * size) ¸¸Å­ÀÇ ¸Ş¸ğ¸®¸¦ ÇÒ´çÇØ¶ó! temp´Â Æ÷ÀÎÅÍ 
+		//int íƒ€ì…ì‚¬ì´ì¦ˆ * (STACK_SIZE * size) ë§Œí¼ì˜ ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹í•´ë¼! tempëŠ” í¬ì¸í„° 
 		temp = (int*)malloc((STACK_SIZE * size)* sizeof(int));
 		
 		for (int i = 0; i < (top + 1); i++) 
 			temp[i] = stack[i];
-		//int Å¸ÀÔ»çÀÌÁî * (STACK_SIZE * (size + 1)) ¸¸Å­ÀÇ ¸Ş¸ğ¸®¸¦ ÇÒ´çÇØ¶ó! stackÀº Æ÷ÀÎÅÍ 
+		//int íƒ€ì…ì‚¬ì´ì¦ˆ * (STACK_SIZE * (size + 1)) ë§Œí¼ì˜ ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹í•´ë¼! stackì€ í¬ì¸í„° 
 		stack = (int*)malloc((STACK_SIZE * (size + 1))* sizeof(int));
 
 		for (int i = 0; i < (top + 1); i++) 
 			stack[i] = temp[i];
-		stack[++top] = item;  // topÀ» Áõ°¡½ÃÅ² ÈÄ ÇöÀç top¿¡ ¿ø¼Ò »ğÀÔ
+		stack[++top] = item;  // topì„ ì¦ê°€ì‹œí‚¨ í›„ í˜„ì¬ topì— ì›ì†Œ ì‚½ì…
 
 		size++;
 
@@ -45,10 +46,10 @@ void push(int item) {
 
 	}
 	else 
-		stack[++top] = item;  // topÀ» Áõ°¡½ÃÅ² ÈÄ ÇöÀç top¿¡ ¿ø¼Ò »ğÀÔ
+		stack[++top] = item;  // topì„ ì¦ê°€ì‹œí‚¨ í›„ í˜„ì¬ topì— ì›ì†Œ ì‚½ì…
 }
 
-// ½ºÅÃÀÇ ¿ø¼Ò¸¦ Ãâ·ÂÇÏ´Â ¿¬»ê
+// ìŠ¤íƒì˜ ì›ì†Œë¥¼ ì¶œë ¥í•˜ëŠ” ì—°ì‚°
 void printStack() {
 	int i;
 	printf(" STACK SIZE [%d]\n", (STACK_SIZE * size));
@@ -62,7 +63,7 @@ void printStack() {
 
 void main(void) {
 	int i;
-	//int Å¸ÀÔ»çÀÌÁî * STACK_SIZE(10) ¸¸Å­ÀÇ ¸Ş¸ğ¸®¸¦ ÇÒ´çÇØ¶ó! stack´Â Æ÷ÀÎÅÍ
+	//int íƒ€ì…ì‚¬ì´ì¦ˆ * STACK_SIZE(10) ë§Œí¼ì˜ ë©”ëª¨ë¦¬ë¥¼ í• ë‹¹í•´ë¼! stackëŠ” í¬ì¸í„°
 	stack = (int*)malloc(STACK_SIZE * sizeof(int));
 	for (i = 0; i < 44; i++) 
 		push(i + 1);
