@@ -107,7 +107,6 @@ void printStack() {
 
 void main(void) {
 	int i;
-	//int 타입사이즈 * STACK_SIZE 만큼의 메모리를 할당해라! stack는 포인터
 	stack = (int*)malloc(STACK_SIZE * sizeof(int));
 
 	for (i = 0; i < 44; i++)
