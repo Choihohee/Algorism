@@ -1,4 +1,7 @@
-public class Main {
+package ch01;
+import java.util.*;
+//개수 세기
+public class Beakjoon10807 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
