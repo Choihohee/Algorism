@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
-public class Main {
+//그룹 단어 체커
+public class Beakjoon1316 {
 	static Scanner in = new Scanner(System.in);
  
 	public static boolean check() {
