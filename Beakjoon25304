@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class Main{
+//영수증
+public class Beakjoon25304 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		
