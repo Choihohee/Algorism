@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
-public class Main{
+//두 수 비교하기
+public class Beakjoon1330 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		
