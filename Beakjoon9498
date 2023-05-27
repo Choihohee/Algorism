@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class Main{
+//시험 성적
+public class Beakjoon9498 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		
