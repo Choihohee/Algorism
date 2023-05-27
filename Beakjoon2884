@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class Main{
+//알람 시계
+public class Beakjoon2884 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		
