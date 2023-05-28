@@ -1,6 +1,6 @@
 import java.util.*;
-
-class Main {
+//오븐 시계
+class Beakjoon2525 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();	//시
