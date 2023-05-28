@@ -1,6 +1,6 @@
 import java.util.Scanner;;
- 
-public class Main {
+//윤년
+public class Beakjoon2753 {
  
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
