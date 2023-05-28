@@ -1,8 +1,6 @@
-package SecondPrjPackage;
-
 import java.util.Scanner;
-
-class Main{
+//주사위 세 개
+class Beakjoon2480 {
 	public static void main(String[] args) {
 		Scanner in=new Scanner(System.in);
 		
