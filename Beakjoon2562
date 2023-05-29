@@ -1,6 +1,6 @@
 import java.util.Scanner;
- 
-public class Main {
+//최댓값 
+public class Beakjoon2562 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int[] arr = { in.nextInt(), in.nextInt(), in.nextInt(),
