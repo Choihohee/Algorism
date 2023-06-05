@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
-public class Main {
+//과제 안 낸 사람 찾기
+public class Beakjoon5597 {
 	public static void main(String[] args) {
 		 
 		Scanner in = new Scanner(System.in);
