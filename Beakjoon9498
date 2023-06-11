@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Scanner; 
 //시험 성적
 public class Beakjoon9498 {
 	public static void main(String[] args) {
