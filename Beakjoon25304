@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Scanner; 
 //영수증
 public class Beakjoon25304 {
 	public static void main(String[] args) {
