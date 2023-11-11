@@ -1,4 +1,4 @@
-package NamgungsungJava;
+
 
 public class FisherYatesShuffleAlgorism {
 	 public static void main(String[] args) {
