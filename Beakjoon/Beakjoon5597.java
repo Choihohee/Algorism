@@ -1,24 +1,20 @@
 package ch01.Beakjoon;
 
 import java.util.Scanner;
-//과제 안 낸 사람 찾기
+
 public class Beakjoon5597 {
 	public static void main(String[] args) {
-		 
-		Scanner in = new Scanner(System.in);
-		int [] student = new int[31];
- 
-		for(int i=1; i<29; i++) {
-			int success = in.nextInt();
-			student[success] = 1;
+		Scanner sc = new Scanner(System.in);
+
+		int students[] = new int[30];	//학생은 30명 있다
+		for (int i = 0; i < 28; i++) {
+			int check[i] = sc.nextInt();
+
 		}
-		for(int i=1; i<student.length; i++) {
-			if(student[i]!=1)
-				System.out.println(i);
-		}
-		
-		
-		in.close();
-		
+
+
+
+
 	}
-} 
+}
+//체크0 이 3이다. 넘0부터29까지 쫙보는거임 있다? 통과 없다?

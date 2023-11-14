@@ -1,7 +1,7 @@
 package ch01.Beakjoon;
 
 import java.util.Scanner;
-/A+B - 3
+
 public class Beakjoon10950 {
 	public static void main(String args[]) {
  
