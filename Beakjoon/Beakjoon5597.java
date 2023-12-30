@@ -18,6 +18,7 @@ public class Beakjoon5597 {
 				System.out.println(i+1);
 			}
 		}
+
 	}
 }
 
