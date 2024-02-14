@@ -10,8 +10,8 @@ public class fun4 {
         int val = 1;
         while (2 * val <= N) {
             val = val / 2;
-            return val;
         }
+        return val;
     }
     public static void main(String[] args) {
         System.out.println(func_4());
