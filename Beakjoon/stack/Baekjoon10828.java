@@ -1,79 +1,49 @@
 package ch01.Beakjoon.stack;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Stack;
+import java.util.StringTokenizer;
 
 public class Baekjoon10828 {
-
-    public static int size = 0;
-    public static int stack[];
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
         StringBuilder stringBuilder = new StringBuilder();
-
-        int N = sc.nextInt();
-        stack = new int[N];
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Stack<Integer> stack = new Stack<Integer>();
+        int N = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < N; i++) {
-            String str = sc.next();
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            String command = st.nextToken();
 
-            switch (str){
-
+            switch (command){
                 case "push":
-                    push(sc.nextInt());
+                    stack.push(Integer.parseInt(st.nextToken()));
                     break;
-
                 case "pop":
-                    stringBuilder.append(pop()).append('\n');
+                    if (stack.isEmpty())
+                        stringBuilder.append(-1).append("\n");
+                    else
+                        stringBuilder.append(stack.pop()).append("\n");
                     break;
-
-                case "top":
-                    stringBuilder.append(top()).append('\n');
-                    break;
-
                 case "size":
-                    stringBuilder.append(size()).append('\n');
+                    stringBuilder.append(stack.size()).append("\n");
                     break;
-
                 case "empty":
-                    stringBuilder.append(empty()).append('\n');
+                    if (stack.isEmpty())
+                        stringBuilder.append(1).append("\n");
+                    else
+                        stringBuilder.append(0).append("\n");
                     break;
-
+                case "top":
+                    if (stack.isEmpty())
+                        stringBuilder.append(-1).append("\n");
+                    else
+                        stringBuilder.append(stack.peek()).append("\n");
+                    break;
             }
-            System.out.println(stringBuilder);
         }
-    }
-    public static void push(int x){
-        stack[size] = x;
-        size++;
-    }
-    public static int pop(){
-        if(size == 0){
-            return -1;
-        }
-        else {
-            int res = stack[size - 1];
-            stack[size-1] = 0;
-            size--;
-            return res;
-        }
-
-    }
-    public static int top(){
-        if (size == 0){
-            return -1;
-        }else{
-            return stack[size];
-        }
-    }
-    public static int size(){
-        return size;
-    }
-    public static int empty(){
-        if(size == 0){
-            return 1;
-        }else {
-            return 0;
-        }
+        System.out.println(stringBuilder);
     }
 }
