@@ -10,14 +10,17 @@ import java.util.StringTokenizer;
 public class Baekjoon10845 {
 
     static Queue<Integer> queue = new LinkedList<>();
+    static int last = 0;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         StringBuilder sb = new StringBuilder();
-        StringTokenizer st = new StringTokenizer(br.readLine());
+
 
         for (int i = 0; i < N; i++) {
-            String command = br.readLine();
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            String command = st.nextToken();
 
             switch (command){
                 case "push":
@@ -43,13 +46,13 @@ public class Baekjoon10845 {
                 case "back":
                     sb.append(back()).append("\n");
                     break;
-
             }
         }
         System.out.println(sb);
     }
     public static void push(int x){
         queue.add(x);
+        last = x;
     }
     public static int pop(){
         if (queue.isEmpty())
@@ -76,6 +79,6 @@ public class Baekjoon10845 {
         if (queue.isEmpty())
             return -1;
         else
-            return ((LinkedList<Integer>)queue).getLast();
+            return last;
     }
 }
