@@ -16,6 +16,7 @@ public class Baekjoon9012 {
         for (int i = 0; i < N; i++) {
             sb.append(check(br.readLine())).append("\n");
         }
+        System.out.println(sb);
     }
     public static String check(String x){
         Stack<Character> stack = new Stack<>();
@@ -27,13 +28,13 @@ public class Baekjoon9012 {
                 stack.push(c);
             //')' 이 나왔지만 스택이 비어있는 경우
             else if (stack.empty())
-                return "no";
+                return "NO";
             else
                 stack.pop();
         }
         if (stack.empty())
-            return "yes";
+            return "YES";
         else
-            return "no";
+            return "NO";
     }
 }
